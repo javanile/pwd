@@ -5,7 +5,7 @@ build:
 
 push: build
 	git add .
-	git commit -am "publish"
+	git commit -am "publish" || true
 	git push
 	docker push javanile/pwd
 
