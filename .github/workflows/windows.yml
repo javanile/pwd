@@ -9,7 +9,13 @@ defaults:
 jobs:
   windows:
     runs-on: windows-latest
+    env:
+      DOCKER_HOST: tcp://docker:2376
+      DOCKER_DRIVER: overlay2
+      DOCKER_TLS_CERTDIR: /certs
+    services:
+      docker:
+        image: docker:19.03.8-dind
     steps:
       - uses: actions/checkout@v2
-      - run: docker build .
       - run: test
