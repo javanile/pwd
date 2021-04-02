@@ -9,6 +9,11 @@ push: build
 	git push
 	docker push javanile/pwd
 
+## =====
+## Tests
+## =====
+test:
+
 test-docker: build
 	docker run --rm -v $${PWD}:/pwd -v /var/run/docker.sock:/var/run/docker.sock javanile/pwd
 

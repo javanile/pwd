@@ -1,0 +1,14 @@
+name: Windows
+
+on: [push, pull_request]
+
+defaults:
+  run:
+    shell: cmd
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: test
