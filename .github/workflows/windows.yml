@@ -11,4 +11,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+      - run: docker build .
       - run: test
