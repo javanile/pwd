@@ -65,7 +65,7 @@ C:\Users\SamSepiol> npm install -g make.bat
 As a standard GNU Make simply you  
 
 ```cmd
-C:\Users\SamSepiol\MrProject> make 
+C:\Users\SamSepiol\MrProject> pwd 
 ```
 
 ## Documentation
