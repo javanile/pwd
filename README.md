@@ -4,11 +4,11 @@
 
 The best way to get around the path change problem with Docker for Windows.
 
-### Why?
+## Why?
 
-The purpose of `pwd` is to detect the equivalent path of the current directory 
-if it were mounted inside a docker container. Since Docker does a path transformation
-from Windows to Linux, it can often be useful to know this path in advance.
+> The purpose of `pwd` is to detect the equivalent path of the current directory 
+> if it were mounted inside a docker container. Since Docker does a path transformation
+> from Windows to Linux, it can often be useful to know this path in advance.
 
 ### Requirements
 
