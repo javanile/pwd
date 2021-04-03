@@ -4,13 +4,11 @@
 
 The best way to get around the path change problem with Docker for Windows.
 
-### Features
+### Why?
 
-* Secure by default. No file, network, or environment access, unless explicitly enabled.
-* Supports TypeScript out of the box.
-* Ships only a single executable file.
-* Built-in utilities like a dependency inspector (deno info) and a code formatter (deno fmt).
-* Set of reviewed standard modules that are guaranteed to work with Deno.
+The purpose of `pwd` is to detect the equivalent path of the current directory 
+if it were mounted inside a docker container. Since Docker does a path transformation
+from Windows to Linux, it can often be useful to know this path in advance.
 
 ### Requirements
 
@@ -66,6 +64,7 @@ As a standard GNU Make simply you
 
 ```cmd
 C:\Users\SamSepiol\MrProject> pwd 
+/host_mnt/c/Users/SamSepiol/MrProject
 ```
 
 ## Documentation
