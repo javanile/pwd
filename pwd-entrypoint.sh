@@ -1,11 +1,5 @@
 #!/bin/sh
 
-export PWD_CONTAINER_ID=$(basename $(cat /proc/1/cpuset))
+export PWD_CONTAINER_ID=$(hostname)
 
-#if [[ ! -f pwd.yml ]]; then
-#  cp /opt/pwd.yml pwd.yml
-#  chmod 777 pwd.yml
-#fi
-
-docker container inspect ${PWD_CONTAINER_ID} | jq -r '.[].Mounts[] | select(.Destination=="/pwd") | .Source'
-#chmod 777 pwd.var
+docker container inspect "${PWD_CONTAINER_ID}" | jq -r '.[].Mounts[] | select(.Destination=="/pwd") | .Source'
